@@ -1,0 +1,129 @@
+:root {
+    --primario: rgb(175, 170, 170);
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: rgba(245, 245, 245, 0.795);
+   
+}
+
+/*HEADER*/
+
+header{
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}
+
+h1.black {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+h1.clear {
+    font-weight: 200;  
+}
+
+.texto {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--primario);
+}
+
+/*MAIN*/
+
+.contain {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding-left: 1.6rem;
+ padding-top: 2rem;
+ display: grid; 
+ grid-template-areas: 
+    ". team ."
+    "supervisor team calculator"
+    "supervisor karma calculator"
+    ". karma .";
+}
+
+
+/* BOXES */
+
+.contain > div {
+  width: 370px;
+  height: 250px;
+  border-radius: 2%;
+  margin-bottom: 1.5rem;
+   box-shadow: 0px 9px 6px 6px rgba(0,0,0,0.07);
+   display: flex;
+   flex-direction: column;
+   background-color: white;
+}
+
+.team {
+  grid-area: team;
+  border-top: 5px solid rgb(233, 30, 30);
+}
+
+.supervisor {
+    grid-area: supervisor;
+    border-top: 5px solid rgb(20, 199, 175);
+}
+.calculator {
+    grid-area: calculator;
+    border-top: 5px solid rgb(63, 61, 173);
+}
+.karma {
+    grid-area: karma;
+    border-top: 5px solid rgb(228, 135, 30);
+}
+
+div > img {
+    align-self: flex-end;
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+}
+
+div > h1 {
+    font-size: 1.4rem ;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+div > p {
+    padding: 1rem;
+    color: var(--primario);
+}
+
+@media screen and ( max-width: 1200px) {
+    .contain {
+        display: block;
+        padding-left: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .texto {
+        max-width: 410px;
+        text-align: justify;
+        
+    }
+    
+}
+
+
+
